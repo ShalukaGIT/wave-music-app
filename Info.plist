@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>NSAudioCaptureUsageDescription</key>
+  <string>Wave needs audio access to visualize your music in real time.</string>
+  <key>NSDesktopScreenRecordingUsageDescription</key>
+  <string>Wave captures system audio to animate the neon wave to your music.</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>Wave can optionally visualize microphone input.</string>
+</dict>
+</plist>

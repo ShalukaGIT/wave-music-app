@@ -1,0 +1,41 @@
+{
+  "name": "wave-music-visualizer",
+  "version": "1.0.0",
+  "description": "Floating neon wave music visualizer for macOS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --mac --dir"
+  },
+  "dependencies": {
+    "electron-audio-loopback": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "^31.0.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.wave.visualizer",
+    "productName": "Wave",
+    "mac": {
+      "target": "dir",
+      "category": "public.app-category.music",
+      "extendInfo": {
+        "NSAudioCaptureUsageDescription": "Wave needs audio access to visualize your music in real time.",
+        "NSDesktopScreenRecordingUsageDescription": "Wave captures system audio to animate the neon wave to your music.",
+        "NSMicrophoneUsageDescription": "Wave can optionally visualize microphone input."
+      },
+      "entitlementsLoginHelper": "entitlements.plist",
+      "entitlements": "entitlements.plist",
+      "entitlementsInherit": "entitlements.plist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*",
+      "node_modules/**/*"
+    ]
+  }
+}
